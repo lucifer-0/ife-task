@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>panel</title>
+    <style>
+    .nav-bar {
+        overflow: hidden;
+        background-color: #444;
+        height: 50px;
+        padding: 10;
+    }
+    
+    .nav-bar ul {
+        list-style-type: none;
+        margin: 10px;
+        padding: 0px;
+        float: right;
+    }
+    
+    .nav-bar ul:first-child {
+        list-style-type: none;
+        margin: 0px;
+        padding: 10px;
+        float: left;
+    }
+    
+    .nav-bar ul li {
+        float: left;
+    }
+    
+    .nav-bar ul li a:link,
+    .nav-bar ul li a:visited {
+        display: block;
+        width: 120px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        padding: 4px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    
+    .nav-bar ul li a:hover,
+    .nav-bar a:active {
+        background-color: #cc0000;
+    }
+    
+    body {
+        background-color: #ddd;
+    }
+    
+    .panel {
+        background-color: white;
+        border: 5px #777;
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+        box-shadow: 2px 2px 1px #888;
+    }
+    
+    .panel-content {
+        margin: 30px;
+        padding: 10px;
+    }
+    
+    .panel-content ul {
+        list-style-type: decimal;
+    }
+    
+    .panel-content .img-panel {
+        text-align: center;
+        background-color: white;
+        border: 1px solid #ddd;
+        width: 200px;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .panel-content .skills {
+        border-collapse: collapse;
+        width: 100%
+    }
+    
+    .panel-content .skills tr th {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .panel-content .skills tr:first-child {
+        background-color: #222;
+        color: white;
+    }
+    
+    #last th {
+        background-color: #ccc;
+    }
+    
+    #last th:first-child {
+        background-color: #ccc;
+    }
+    
+    .panel-content .title {
+        list-style-type: none;
+    }
+    
+    .panel-content blockquote {
+        border-left: 5px solid #eee;
+        padding: 10px;
+    }
+    
+    .panel-content .form-group table {
+        position: relative;
+        left: 30%;
+    }
+    
+    .panel-content .form-group form label {
+        float: right;
+    }
+    
+    .panel-content .form-group form input {
+        float: left;
+    }
+    
+    .panel-content .form-group form p {
+        color: #ccc;
+    }
+    
+    .panel-content .form-group form table th {
+        padding: 5px;
+    }
+    
+    .panel-content .form-group .label-sex {
+        float: left;
+    }
+    
+    .radio {
+        display: none
+    }
+    
+    .radioInput {
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 100%;
+        display: inline-block;
+        height: 16px;
+        margin-right: 5px;
+        margin-top: -1px;
+        vertical-align: middle;
+        width: 16px;
+        line-height: 1
+    }
+    
+    .radio:checked + .radioInput:after {
+        background-color: #4567bc;
+        border-radius: 100%;
+        content: "";
+        display: inline-block;
+        height: 12px;
+        margin: 2px;
+        width: 12px
+    }
+    
+    .city {
+        float: left;
+        border-radius: .3em;
+        border: 0.1em solid gray;
+        padding-left: 10px;
+        width: 80px;
+        height: 100%;
+    }
+    
+    .checkbox {
+        display: none;
+    }
+    
+    .boxInput {
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: .3em;
+        display: inline-block;
+        height: 16px;
+        margin-right: 10px;
+        margin-top: -1px;
+        vertical-align: middle;
+        width: 16px;
+        line-height: 1
+    }
+    
+    .checkbox:checked + .boxInput:after {
+        background-color: #4567bc;
+        border-radius: 100%;
+        content: "";
+        display: inline-block;
+        height: 12px;
+        margin: 2px;
+        width: 12px
+    }
+    
+    .label-text {
+        position: relative;
+        bottom: 40px;
+    }
+    
+    .panel-content .form-group form button {
+        width: 100%;
+        height: 30px;
+        background-color: #3251cd;
+        color: white;
+        font-style: bolder;
+        font-size: 16px;
+        border: 0px;
+        border-radius: .5em;
+    }
+    
+    .footer {
+        background-color: black;
+        color: white;
+        height: 60px;
+        text-align: center;
+        padding: -8px;
+        margin: -8px;
+    }
+    
+    .footer p {
+        padding: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><img src="Yellow-pin.png"></li>
+        </ul>
+        <ul>
+            <li><a href="#">导航一</a></li>
+            <li><a href="#">导航二</a></li>
+            <li><a href="#">导航三</a></li>
+            <li><a href="#">导航四</a></li>
+        </ul>
+    </div>
+    <div class="panel">
+        <div class="panel-content">
+            <h1>kalision</h1>
+            <h2>balabala</h2>
+            <p> by me 2017/2/26 </p>
+            <p> this is a paragraph, very very long paragraph.....
+                <br> lala and there are <a href="http://ife.baidu.com/">link</a>
+                <br>
+                <img src="Yellow-pin.png">
+            </p>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-content">
+            <h1>kalision</h1>
+            <h2>balabala</h2>
+            <p> by me 2017/2/26 </p>
+            <p>
+                &nbsp;&nbsp;this is a paragraph, very very long paragraph.....
+                <br> lala and there are <a href="http://ife.baidu.com/">link</a>
+                <div class="img-panel">
+                    <p>这是一张图片</p>
+                    <img src="gayhub.png" height="120" width="120">
+                </div>
+                <div class="img-panel">
+                    <p>这是一张图片</p>
+                    <img src="gayhub.png" height="120" width="120">
+                </div>
+                <div class="img-panel">
+                    <p>这是一张图片</p>
+                    <img src="gayhub.png" height="120" width="120">
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-content">
+            <h1>Last paragraph</h1>
+            <h2>balabala</h2>
+            <p> by me 2017/2/26 </p>
+            <ul>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ul>
+            <br>
+            <p> this is a paragraph, very very long paragraph.....
+                <br> lala and there are <a href="http://ife.baidu.com/">link</a>
+                <br>
+                <table class="skills">
+                    <tr>
+                        <th>skills</th>
+                        <th>skill level</th>
+                        <th>learn</th>
+                    </tr>
+                    <tr>
+                        <th>html</th>
+                        <th>beginner</th>
+                        <th><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction">learn html</a></th>
+                    </tr>
+                    <tr>
+                        <th>css</th>
+                        <th>beginner</th>
+                        <th><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started">learn css</a></th>
+                    </tr>
+                    <tr id="last">
+                        <th>javascript</th>
+                        <th>beginner</th>
+                        <th><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">learn javascript</a></th>
+                    </tr>
+                </table>
+            </p>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-content">
+            <blockquote>
+                This is the last panel
+            </blockquote>
+            <div class="form-group">
+                <form>
+                    <table>
+                        <tr>
+                            <th>
+                                <label for="email">请输入邮箱地址</label>
+                            </th>
+                            <th>
+                                <input name="email" type="text">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <p>邮箱地址按要求格式输入</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="password">请输入密码</label>
+                            </th>
+                            <th>
+                                <input name="password" type="password">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="password2">请重复输入密码</label>
+                            </th>
+                            <th>
+                                <input name="passwrod2" type="password">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <p>密码为6-16位英文数字</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="sex">性别</label>
+                            </th>
+                            <th>
+                                <label class="label-sex">
+                                    <input class="radio" type="radio" name="radio">
+                                    <span class="radioInput"></span>男
+                                </label>
+                                <label class="label-sex">
+                                    <input class="radio" type="radio" name="radio">
+                                    <span class="radioInput"></span>女
+                                </label>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>城市</label>
+                            </th>
+                            <th>
+                                <select class="city">
+                                    <option value="volvo">深圳</option>
+                                    <option value="saab">北京</option>
+                                    <option value="opel">广州</option>
+                                    <option value="audi">上海</option>
+                                </select>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>爱好</label>
+                            </th>
+                            <th>
+                                <label class="label-hobby">
+                                    <input class="checkbox" type="checkbox" name="checkbox">
+                                    <span class="boxInput"></span>运动
+                                </label>
+                                <label class="label-hobby">
+                                    <input class="checkbox" type="checkbox" name="checkbox">
+                                    <span class="boxInput"></span>计算机
+                                </label>
+                                <label class="label-hobby">
+                                    <input class="checkbox" type="checkbox" name="checkbox">
+                                    <span class="boxInput"></span>艺术
+                                </label>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="label-text">个人描述</label>
+                            </th>
+                            <th>
+                                <textarea style="width: 200%; height: 100px; resize:none"></textarea>
+                            </th>
+                        </tr>
+                    </table>
+                    <button type="submit">确认提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>@ by gorden</p>
+    </footer>
+</body>
+
+</html>
