@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+    .container {
+        overflow: auto;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #999;
+        background: #eee;
+    }
+    
+    .box-left {
+        position: relative;
+        float: left;
+        width: 200px;
+        margin-right: 20px;
+        border: 1px solid #999;
+    }
+    
+    .box-left p {
+        position: relative;
+        top: 20px;
+        right: 20px;
+        float: right;
+        overflow: auto;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .box-left img {
+        position: relative;
+        float: left;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+    }
+    
+    .box-center {
+        position: sticky;
+        overflow: auto;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #999;
+    }
+    
+    .box-right {
+        position: relative;
+        float: right;
+        border: 1px #999;
+        width: 120px;
+        margin-left: 20px;
+        background-color: white;
+        border: 1px solid #999;
+    }
+    
+    .box-right img {
+        position: relative;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div name="team_logo" class="box-left">
+            <p>小黑屋</p>
+            <img src="gayhub.png">
+        </div>
+        <div name="personal_logo" class="box-right">
+            <img src="me.gif">
+            <br>
+            <img src="me.gif">
+            <br>
+            <img src="me.gif">
+            <br>
+            <img src="laugh.png">
+        </div>
+        <div name="introduction" class="box-center">
+            <p>垃圾技术，垃圾团队，垃圾人生
+                <br> 厉害了
+                <br> CSS书写顺序 1.位置属性(position, top, right, z-index, display, float等) 2.大小(width, height, padding, margin) 3.文字系列(font, line-height, letter-spacing, color- text-align等) 4.背景(background, border等) 5.其他(animation, transition等)
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
